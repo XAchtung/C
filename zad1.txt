@@ -1,0 +1,56 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    int tab[6][6];
+    int liczba, wybor;
+    
+    srand(time(NULL));
+    for (int x = 0; x < 6; x++)
+    {
+        for(int y = 0; y < 6; y++)
+        {
+            tab[x][y] = (rand()%10)+1;
+            cout<<tab[x][y]<<endl;
+        }
+    }
+    cout<<"Dodać czy pomnozyć liczby?"<<endl;
+    cout<<"1. Dodać"<<endl;
+    cout<<"2. Pomnozyć"<<endl;
+    cin>>wybor;
+
+    switch(wybor)
+    {
+        case 1:
+            cout<<"Przez jaka liczbe?"<<endl;
+            cin>>liczba;
+            
+            for(int x = 0; x < 6; x++)
+            {
+                for(int y = 0; y < 6; y++)
+                {
+                    tab[x][y] += liczba;
+                    cout<< tab[x][y];
+                }
+            }break;
+            
+        case 2:
+            cout<<"Przez jaka liczbe?"<<endl;
+            cin>>liczba;
+            
+            for(int x = 0; x < 6; x++)
+            {
+                for(int y = 0; y < 6; y++)
+                {
+                    tab[x][y] *= liczba;
+                    cout<< tab[x][y];
+                }
+            }break; 
+    }
+    
+    
+    return 0;
+}

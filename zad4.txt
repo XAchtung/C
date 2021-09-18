@@ -1,0 +1,24 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    int tab[10];
+    int x;
+    int max = 0;
+    
+    srand(time(NULL));
+    for(int i=0; i < 10; i++)
+    {
+        x = rand() % 10;
+        cout<< tab[x]<<endl;
+        
+        if(tab[x] > max)
+            {
+                max=tab[x];
+                cout<<"Maksymalna liczba:"<< max <<endl;
+            }
+    }
+}
+

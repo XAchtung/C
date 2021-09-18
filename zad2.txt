@@ -1,0 +1,47 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    int a, b;
+    
+	string imi[10];
+	string naz[10];
+	
+	imi[0] = "Koscielny";
+	imi[1] = "Komenda";
+	imi[2] = "Mackowski";
+	imi[3] = "Zaba";
+	imi[4] = "Brodkowski";
+	imi[5] = "Gorczak";
+	imi[6] = "Cieluch";
+	imi[7] = "Mlynek";
+	imi[8] = "Gornik";
+	imi[9] = "Blok";
+	
+	naz[0] = "Flora";
+	naz[1] = "Torin";
+	naz[2] = "Olimpia";
+	naz[3] = "Janusz";
+	naz[4] = "Rafael";
+	naz[5] = "Nana";
+	naz[6] = "Gabriel";
+	naz[7] = "Judasz";
+	naz[8] = "Dobrochna";
+	naz[9] = "Catalina";
+
+	srand(time(NULL));
+	for (int i = 0; i < 10; i++)
+	{
+	    for(int j = 0; j < 10; j++)
+	    {
+	        a = rand() % 10;
+	        b = rand() % 10;
+	        cout<<imi[a]<<" "<<naz[b]<<endl;
+	    }
+
+	}
+}
+
+
